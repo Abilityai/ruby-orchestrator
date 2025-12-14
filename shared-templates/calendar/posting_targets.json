@@ -1,0 +1,36 @@
+{
+  "weekly_targets": {
+    "twitter": {
+      "posts_per_week": 21,
+      "posts_per_day": 3,
+      "optimal_times": ["09:00", "13:00", "17:00"]
+    },
+    "linkedin": {
+      "posts_per_week": 7,
+      "posts_per_day": 1,
+      "optimal_times": ["08:00", "12:00"]
+    },
+    "instagram": {
+      "posts_per_week": 7,
+      "posts_per_day": 1,
+      "optimal_times": ["11:00", "19:00"]
+    },
+    "threads": {
+      "posts_per_week": 14,
+      "posts_per_day": 2,
+      "optimal_times": ["10:00", "20:00"]
+    },
+    "tiktok": {
+      "posts_per_week": 7,
+      "posts_per_day": 1,
+      "optimal_times": ["12:00", "18:00"]
+    },
+    "youtube": {
+      "posts_per_week": 2,
+      "posts_per_day": 0.3,
+      "optimal_times": ["14:00"]
+    }
+  },
+  "timezone": "Europe/Lisbon",
+  "last_updated": null
+}

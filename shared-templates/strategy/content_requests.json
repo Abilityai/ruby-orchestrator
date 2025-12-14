@@ -1,0 +1,19 @@
+{
+  "requests": [],
+  "_schema": {
+    "requests": [
+      {
+        "id": "string (uuid)",
+        "type": "video|image|text",
+        "description": "string",
+        "hook_type": "scary|strange|sexy|free_value|familiar",
+        "pillar": "string",
+        "priority": "high|medium|low",
+        "requested_by": "ruby-orchestrator|ruby-content",
+        "requested_at": "string (ISO 8601)",
+        "status": "pending|in_progress|completed",
+        "completed_content_id": "string or null"
+      }
+    ]
+  }
+}

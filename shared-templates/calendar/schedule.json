@@ -1,0 +1,21 @@
+{
+  "posts": [],
+  "last_updated": null,
+  "_schema": {
+    "posts": [
+      {
+        "id": "string (uuid)",
+        "content": "string (post text)",
+        "platforms": ["string (platform names)"],
+        "scheduled_time": "string (ISO 8601)",
+        "media_urls": ["string (URLs)"],
+        "status": "scheduled|published|failed",
+        "hook_type": "scary|strange|sexy|free_value|familiar",
+        "pillar": "string (content pillar)",
+        "source_content_id": "string (reference)",
+        "created_at": "string (ISO 8601)",
+        "published_at": "string (ISO 8601) or null"
+      }
+    ]
+  }
+}

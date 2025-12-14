@@ -1,0 +1,15 @@
+{
+  "urls": [],
+  "_schema": {
+    "urls": [
+      {
+        "id": "string (uuid)",
+        "original_path": "string (local file path)",
+        "gofile_url": "string (https://gofile.io/d/XXXXX)",
+        "uploaded_at": "string (ISO 8601)",
+        "expires_at": "string (ISO 8601, 30 days from upload)",
+        "used_in_posts": ["string (post IDs)"]
+      }
+    ]
+  }
+}

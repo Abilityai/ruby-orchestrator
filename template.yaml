@@ -1,0 +1,127 @@
+# Ruby Orchestrator - Master Scheduler and Publisher
+name: ruby-orchestrator
+display_name: "Ruby Orchestrator"
+version: "1.0"
+author: "Ability AI"
+updated: "2025-12-13"
+tagline: "Master coordinator for content scheduling and publishing"
+
+description: |
+  Ruby Orchestrator is the central coordinator of the Ruby multi-agent content system.
+  It manages the master content calendar, publishes posts to social media via Blotato,
+  tracks analytics via Metricool, and coordinates with ruby-content and ruby-engagement agents.
+
+resources:
+  cpu: "2"
+  memory: "4g"
+
+# Shared folder configuration - orchestrator exposes, others consume
+shared_folders:
+  expose: true
+  consume: false
+
+# Sub-agents
+sub_agents:
+  - name: media-manager
+    description: "Uploads media to GoFile for temporary hosting, manages URL registry"
+  - name: batch-scheduler
+    description: "Bulk scheduling operations, balances posts by hook type and pillar"
+  - name: newsletter-agent
+    description: "Prepares Friday Substack newsletter from week's content"
+  - name: analytics-agent
+    description: "Queries Metricool for performance metrics and optimal posting times"
+  - name: system-monitor
+    description: "Health checks, heartbeat management, alert handling"
+
+# Slash commands
+commands:
+  - name: schedule-post
+    description: "Schedule a single post to specified platforms"
+  - name: publish-now
+    description: "Immediately publish content to specified platforms"
+  - name: weekly-plan
+    description: "Monday planning workflow - analyze and schedule week's content"
+  - name: daily-routine
+    description: "Daily health check and publishing verification"
+
+# Skills
+skills:
+  - name: blotato-posting
+    description: "Multi-platform posting via Blotato API"
+
+# MCP Servers
+mcp_servers:
+  - name: mcp-metricool
+    description: "Analytics and scheduling insights from Metricool"
+
+# Capabilities
+capabilities:
+  - multi_platform_posting
+  - content_scheduling
+  - analytics_reporting
+  - media_management
+
+# Supported platforms
+platforms:
+  - Twitter
+  - LinkedIn
+  - Instagram
+  - TikTok
+  - YouTube
+  - Threads
+
+# Credentials schema
+credentials:
+  mcp_servers:
+    mcp-metricool:
+      env_vars:
+        - METRICOOL_USER_TOKEN
+        - METRICOOL_USER_ID
+
+  env_file:
+    - BLOTATO_API_KEY
+    - BLOTATO_BASE_URL
+    - BLOTATO_YOUTUBE_ID
+    - BLOTATO_INSTAGRAM_ID
+    - BLOTATO_LINKEDIN_ID
+    - BLOTATO_TWITTER_ID
+    - BLOTATO_THREADS_ID
+    - BLOTATO_TIKTOK_ID
+    - GOFILE_API_TOKEN
+    - GOFILE_ACCOUNT_ID
+    - GOFILE_ROOT_FOLDER
+
+# Custom metrics
+metrics:
+  - name: posts_scheduled
+    type: counter
+    label: "Scheduled"
+    description: "Posts scheduled this week"
+    icon: "calendar"
+
+  - name: posts_published
+    type: counter
+    label: "Published"
+    description: "Posts published today"
+    icon: "check-circle"
+
+  - name: publishing_queue
+    type: gauge
+    label: "Queue"
+    description: "Posts pending publication"
+    icon: "queue-list"
+
+  - name: agent_status
+    type: status
+    label: "Status"
+    description: "Orchestrator health"
+    values:
+      - value: "active"
+        color: "green"
+        label: "Active"
+      - value: "idle"
+        color: "gray"
+        label: "Idle"
+      - value: "error"
+        color: "red"
+        label: "Error"

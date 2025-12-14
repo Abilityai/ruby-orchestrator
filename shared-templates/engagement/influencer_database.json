@@ -1,0 +1,26 @@
+{
+  "influencers": [],
+  "categories": [
+    "educators",
+    "ai_researchers",
+    "enterprise_leaders",
+    "framework_creators",
+    "vcs",
+    "rising_stars"
+  ],
+  "_schema": {
+    "influencers": [
+      {
+        "id": "string (uuid)",
+        "twitter_handle": "string",
+        "name": "string",
+        "category": "string",
+        "followers": 0,
+        "engagement_rate": 0,
+        "last_interaction": "string (ISO 8601) or null",
+        "notes": "string"
+      }
+    ]
+  },
+  "_comment": "Managed by ruby-engagement agent"
+}

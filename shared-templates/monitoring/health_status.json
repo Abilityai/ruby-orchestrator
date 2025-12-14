@@ -1,0 +1,26 @@
+{
+  "overall": "unknown",
+  "last_check": null,
+  "agents": {
+    "orchestrator": "unknown",
+    "content": "unknown",
+    "engagement": "unknown"
+  },
+  "services": {
+    "blotato_api": "unknown",
+    "gofile_api": "unknown",
+    "metricool_api": "unknown"
+  },
+  "rate_limits": {
+    "blotato_publishing": {
+      "used": 0,
+      "limit": 30,
+      "reset": null
+    },
+    "blotato_media": {
+      "used": 0,
+      "limit": 10,
+      "reset": null
+    }
+  }
+}

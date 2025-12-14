@@ -1,0 +1,11 @@
+{
+  "twitter": ["09:00", "13:00", "17:00"],
+  "linkedin": ["08:00", "12:00"],
+  "instagram": ["11:00", "19:00"],
+  "threads": ["10:00", "20:00"],
+  "tiktok": ["12:00", "18:00"],
+  "youtube": ["14:00"],
+  "timezone": "Europe/Lisbon",
+  "last_updated": null,
+  "_comment": "Times are in 24-hour format, Europe/Lisbon timezone"
+}

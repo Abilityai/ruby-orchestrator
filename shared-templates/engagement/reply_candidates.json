@@ -1,0 +1,20 @@
+{
+  "candidates": [],
+  "_schema": {
+    "candidates": [
+      {
+        "id": "string (uuid)",
+        "tweet_id": "string",
+        "tweet_text": "string",
+        "author_username": "string",
+        "author_followers": 0,
+        "engagement_score": 0,
+        "reply_draft": "string",
+        "status": "pending|approved|posted|skipped",
+        "discovered_at": "string (ISO 8601)",
+        "posted_at": "string or null"
+      }
+    ]
+  },
+  "_comment": "Managed by ruby-engagement agent"
+}

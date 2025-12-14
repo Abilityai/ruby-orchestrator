@@ -1,0 +1,28 @@
+{
+  "week": null,
+  "created_at": null,
+  "targets": {
+    "twitter": 21,
+    "linkedin": 7,
+    "instagram": 7,
+    "threads": 14,
+    "tiktok": 7,
+    "youtube": 2
+  },
+  "scheduled": {
+    "twitter": 0,
+    "linkedin": 0,
+    "instagram": 0,
+    "threads": 0,
+    "tiktok": 0,
+    "youtube": 0
+  },
+  "hook_distribution": {
+    "scary": 0,
+    "strange": 0,
+    "sexy": 0,
+    "free_value": 0,
+    "familiar": 0
+  },
+  "notes": []
+}

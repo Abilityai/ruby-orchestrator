@@ -1,0 +1,20 @@
+{
+  "items": [],
+  "last_scanned": null,
+  "_schema": {
+    "items": [
+      {
+        "id": "string (uuid)",
+        "title": "string",
+        "type": "video|image|text|carousel",
+        "source_path": "string (file path)",
+        "hook_type": "scary|strange|sexy|free_value|familiar",
+        "pillar": "string (content pillar)",
+        "platforms_suitable": ["string (platform names)"],
+        "status": "available|scheduled|published",
+        "created_at": "string (ISO 8601)",
+        "metadata": {}
+      }
+    ]
+  }
+}
