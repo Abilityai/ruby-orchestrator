@@ -15,10 +15,12 @@ resources:
   cpu: "2"
   memory: "4g"
 
-# Shared folder configuration - orchestrator exposes, others consume
+# Shared folder configuration - full mesh (all expose and consume)
+# Each agent writes to /home/developer/shared-out/
+# Each agent reads from /home/developer/shared-in/{agent-name}/
 shared_folders:
   expose: true
-  consume: false
+  consume: true
 
 # Sub-agents
 sub_agents:
@@ -72,24 +74,49 @@ platforms:
 
 # Credentials schema
 credentials:
-  mcp_servers:
-    mcp-metricool:
-      env_vars:
-        - METRICOOL_USER_TOKEN
-        - METRICOOL_USER_ID
-
-  env_file:
-    - BLOTATO_API_KEY
-    - BLOTATO_BASE_URL
-    - BLOTATO_YOUTUBE_ID
-    - BLOTATO_INSTAGRAM_ID
-    - BLOTATO_LINKEDIN_ID
-    - BLOTATO_TWITTER_ID
-    - BLOTATO_THREADS_ID
-    - BLOTATO_TIKTOK_ID
-    - GOFILE_API_TOKEN
-    - GOFILE_ACCOUNT_ID
-    - GOFILE_ROOT_FOLDER
+  required:
+    # Metricool MCP
+    - name: METRICOOL_USER_TOKEN
+      description: Metricool API user token
+      service: metricool
+    - name: METRICOOL_USER_ID
+      description: Metricool user ID
+      service: metricool
+    # Blotato API
+    - name: BLOTATO_API_KEY
+      description: Blotato API key for social posting
+      service: blotato
+    - name: BLOTATO_BASE_URL
+      description: Blotato API base URL
+      service: blotato
+    - name: BLOTATO_YOUTUBE_ID
+      description: Blotato YouTube account ID
+      service: blotato
+    - name: BLOTATO_INSTAGRAM_ID
+      description: Blotato Instagram account ID
+      service: blotato
+    - name: BLOTATO_LINKEDIN_ID
+      description: Blotato LinkedIn account ID
+      service: blotato
+    - name: BLOTATO_TWITTER_ID
+      description: Blotato Twitter account ID
+      service: blotato
+    - name: BLOTATO_THREADS_ID
+      description: Blotato Threads account ID
+      service: blotato
+    - name: BLOTATO_TIKTOK_ID
+      description: Blotato TikTok account ID
+      service: blotato
+    # GoFile media hosting
+    - name: GOFILE_API_TOKEN
+      description: GoFile API token for media uploads
+      service: gofile
+    - name: GOFILE_ACCOUNT_ID
+      description: GoFile account ID
+      service: gofile
+    - name: GOFILE_ROOT_FOLDER
+      description: GoFile root folder ID
+      service: gofile
 
 # Custom metrics
 metrics:

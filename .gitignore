@@ -1,6 +1,16 @@
-# Environment and secrets
+# Environment and secrets (DO NOT COMMIT)
 .env
 .mcp.json
+
+# Keep templates (DO COMMIT)
+!.mcp.json.template
+!.env.example
+
+# Trinity platform injection (DO NOT COMMIT)
+.trinity/
+.claude/commands/trinity/
+plans/
+vector-store/
 
 # OS files
 .DS_Store
